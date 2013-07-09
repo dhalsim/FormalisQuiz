@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{E12EEFE8-C3EC-429C-BC85-E498EBAEAD09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{DDC23378-1B02-4D72-BD6D-6E9EFCF5BF8C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C915A006-D305-4DA7-9EB7-561A62CCE32C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F7B262FB-53FA-4787-B0BD-1BB6F04B50AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{DF7FBA07-F1F6-4038-9932-F84DD428B68C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{D441A6E6-3516-4962-A0EF-4C9BE6D51335}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTests", "IntegrationTests", "{09874596-C84E-4027-B3DD-5082DC478C4B}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "FormalisQuizModelingProject", "Library\FormalisQuizModelingProject\FormalisQuizModelingProject.modelproj", "{B2F8AAC0-CEAA-4220-A993-BFD483C4763D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2F8AAC0-CEAA-4220-A993-BFD483C4763D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2F8AAC0-CEAA-4220-A993-BFD483C4763D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2F8AAC0-CEAA-4220-A993-BFD483C4763D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2F8AAC0-CEAA-4220-A993-BFD483C4763D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B2F8AAC0-CEAA-4220-A993-BFD483C4763D} = {DDC23378-1B02-4D72-BD6D-6E9EFCF5BF8C}
+		{D441A6E6-3516-4962-A0EF-4C9BE6D51335} = {F7B262FB-53FA-4787-B0BD-1BB6F04B50AF}
+		{09874596-C84E-4027-B3DD-5082DC478C4B} = {F7B262FB-53FA-4787-B0BD-1BB6F04B50AF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a51f9fef-053f-4a07-a7be-a092ad55586a" name="FormalisQuizClassDiagrams" linkedPackageId="322c0d6a-76fb-4b78-b426-c47eb0954e6b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="48cd4b18-abe4-480f-92a6-45ce6bbf5974">
+      <profileInstance Id="b0511919-b316-4cf6-8dd6-93e44feeba25" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0278a22d-2c9a-4c37-bc82-3c562cd72855">
+      <profileInstance Id="c9d48639-2b77-4092-bff9-85d038affcb4" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="731901f3-c89c-47b3-a4ae-dd1d16241f52" name="User" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2ac2a2dc-c60a-4b87-95c7-437a16ea461e" />
+        <ownedAttributesInternal>
+          <property Id="9678691b-e6c9-4fde-aac0-ee7c5d4c986c" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6e5ea8e-9b86-4b1d-b656-34da9a1ad570" />
+          </property>
+          <property Id="ecfd19e6-2b6e-4b83-93db-5eec270b82bb" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c220655f-0554-4a90-92cc-98474413d4a9" />
+          </property>
+          <property Id="21f718e6-d105-4902-967d-a42c0881a7c4" name="Surname" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8fc230b6-5c4a-4dab-9896-a7ae04d423e3" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="43f80c5e-9a21-400e-bfb8-42039b77393e" name="Quiz" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="daf13fbf-8c8d-410e-b739-4c4b5249ac2c" />
+        <ownedAttributesInternal>
+          <property Id="d678d4a5-4d4d-4ed7-a078-fe49dff5e2cf" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3976856a-2cbb-44ba-8465-92d59fbb5db5" />
+          </property>
+          <property Id="07c8d2fd-7a24-4503-bab6-e11f75b9c3ab" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fb3e0130-87f4-41f4-9903-5afba55a699f" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dc2e1b0f-1665-4aaa-a24c-0414a1500c56" name="Question" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8d306ffe-b4d7-41de-bbcb-477053a2362d" />
+        <ownedAttributesInternal>
+          <property Id="f6826057-067b-42e6-9413-e83f92d88940" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="638f3e81-9d63-4d6f-a621-f90c5dbdffde" />
+          </property>
+          <property Id="af836788-0d13-498a-bb9c-61f6942f7dab" name="Text" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4d7e786f-81a5-4b4b-aa2d-18c39d134334" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="49c793f7-aad2-43f0-8165-54b9c907bfd4" name="Question_Answer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="7441af61-b56c-476a-a59b-be10dbe3896a" />
+        <ownedAttributesInternal>
+          <property Id="14873d50-4699-45b0-80b0-76c0c877c7b7" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="75c207d4-89d0-4bc9-9cca-1e887f279979" />
+          </property>
+          <property Id="15d72b51-ade9-4ab0-b74b-cc2ae347238e" name="QuestionId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="22584b3a-dd99-459d-be80-245a9338f94a" />
+          </property>
+          <property Id="47dee9a2-8236-4796-b7a5-94b4f4160e7f" name="AnswerId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f76fde79-b20c-46b7-a7d0-8f1769b68e02" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d6fb04bc-9044-46ba-96c7-3fb0cf1f94cb" name="Result" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0be0793f-474c-48aa-a62f-2aa633eb2816" />
+        <ownedAttributesInternal>
+          <property Id="0108c65c-596c-4dca-81a6-bd223699f797" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e4389327-9b78-49bd-8b24-cc6ad56b0fe5" />
+          </property>
+          <property Id="b2346c82-271b-4188-b1fc-c0d6f7c466f0" name="QuizId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dc8e955b-6301-42bb-97cc-748a6842b09a" />
+          </property>
+          <property Id="c717e3b1-ef43-4e05-beec-3e1001fd606f" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="184c1e7c-639c-40e1-b837-287ea21b5674" />
+          </property>
+          <property Id="36744a50-3a8e-465d-a5dc-4f98500e88e1" name="False" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25f687ee-07d1-4943-ba51-00e80d739d03" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b01b985d-69af-4fd3-9048-5b5483cb89c6" name="User_Quiz" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd949f56-ca0a-4f44-be42-b2f9bbfb5d86" />
+        <ownedAttributesInternal>
+          <property Id="c7395357-7fe6-4d46-9fa8-6bc2580a5ac4" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0ceee4e0-1fc3-43a3-bc08-1a6adf984c12" />
+          </property>
+          <property Id="bbf51e2c-6650-4215-92d8-4a469883ccf9" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="65519cd2-bf25-4451-9c32-1db1fd669795" />
+          </property>
+          <property Id="c2a87b4a-e698-496b-84ac-8ed99169e694" name="QuizId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d61281ee-036a-4078-8dcc-6d8f61da7f12" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4813fab4-b540-4ed1-8a6e-fcb00d011f0a" name="Answer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="038b37c5-7bae-487d-99c0-764dd67ae7a1" />
+        <ownedAttributesInternal>
+          <property Id="5e0cb1df-ff18-462a-b1ce-0d311912fbef" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c192e785-b350-40bf-8128-4750c333f9f6" />
+          </property>
+          <property Id="3ffa9eb0-358f-4619-b0be-35e030b73b5d" name="Text" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="28a05431-e5b8-4d8c-ab3d-62927413b76d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4d8d78a1-9af3-48d9-b2d2-5145d730fd55" name="Role" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="03398ce9-94a2-4931-ad50-0af0772ec236" />
+        <ownedAttributesInternal>
+          <property Id="c85a9a57-1853-48d5-bcb9-728de6b2a260" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9d1004d0-6e1d-4fe6-a02d-7dc9da46b096" />
+          </property>
+          <property Id="e91125f5-4748-4db8-98d6-e8c624ec868a" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a71744e2-7be1-4179-81b0-e2f05eee3c13" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dc9895b2-a0d4-4339-ae10-1bc3facc964b" name="User_Role" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="db5bc168-d539-4c88-a2e4-f415c2a571b8" />
+        <ownedAttributesInternal>
+          <property Id="a8a0bfae-2032-469e-ab24-071c71b13091" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d39c688e-929e-47a5-be8d-65db2414b0cf" />
+          </property>
+          <property Id="d37ea52a-72b3-4820-989b-8abbbf2d1288" name="UserId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d2888ad5-1b64-42d7-b417-4c2e17728eb8" />
+          </property>
+          <property Id="5a1f7c45-4c1d-4fb3-b96a-f50bf1ca4c78" name="RoleId" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="86c7a56a-6b63-4c20-8bba-fc97180aaf0c" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="322c0d6a-76fb-4b78-b426-c47eb0954e6b" name="FormalisQuizModelingProject">
+    <elementDefinition Id="f0bbd819-24b3-4d48-b0f4-c04a3ab85662" />
+  </package>
+</logicalClassDesignerModel>
