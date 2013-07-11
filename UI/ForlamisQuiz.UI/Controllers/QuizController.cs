@@ -84,6 +84,7 @@ namespace ForlamisQuiz.UI.Controllers
             {
                 _db.Entry(quiz).State = EntityState.Modified;
                 _db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return View(quiz);

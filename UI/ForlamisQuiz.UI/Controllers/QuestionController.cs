@@ -17,9 +17,9 @@ namespace ForlamisQuiz.UI.Controllers
         //
         // GET: /Question/
 
-        public ActionResult Index()
+        public ActionResult Index(int quizID)
         {
-            return View(db.Questions.ToList());
+            return View(db.Questions.Where(question => question.Quiz.Id == quizID).ToList());
         }
 
         //
@@ -38,9 +38,11 @@ namespace ForlamisQuiz.UI.Controllers
         //
         // GET: /Question/Create
 
-        public ActionResult Create(int id)
+        public ActionResult Create(int quizId)
         {
-            return View();
+            var questionOperations = new QuestionOperations();
+            var question = questionOperations.Get(quizId) ?? new Question();
+            return View(question);
         }
 
         //
@@ -48,11 +50,21 @@ namespace ForlamisQuiz.UI.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Question question)
+        public ActionResult Create(Question question, int quizId)
         {
             if (ModelState.IsValid)
             {
-                db.Questions.Add(question);
+                if (question.Id == 0)
+                {
+                    question.Quiz = db.Quizzes.Find(quizId);
+                    db.Questions.Add(question);
+                }
+                else
+                {
+                    db.Questions.Attach(question);
+                    db.Entry(question).State = EntityState.Modified;
+                }
+
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -110,7 +122,11 @@ namespace ForlamisQuiz.UI.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Question question = db.Questions.Find(id);
+            question.Answers.Clear();
+
+
             db.Questions.Remove(question);
+
             db.SaveChanges();
             return RedirectToAction("Index");
         }

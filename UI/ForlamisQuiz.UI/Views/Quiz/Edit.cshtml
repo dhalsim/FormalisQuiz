@@ -29,18 +29,17 @@
             <table>
                 <tr>
                     <td>
-                        @Html.Display(q.Text)
+                        @Html.Label(q.Text)
                     </td>
                     <td>
-                        @Html.ActionLink("Edit", "Edit", new { id = q.Id }) |
-                        @Html.ActionLink("Details", "Details", new { id = q.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id = q.Id })
+                        @Html.ActionLink("Düzenle", "Create", "Question", new { id = q.Id }, null) |
+                        @Html.ActionLink("Sil", "Delete", "Question", new { id = q.Id }, null)
                     </td>
                 </tr>
             </table>
         }
 
-        @Html.ActionLink("Yeni soru ekle", "Create", "Question", new { id = Model.Id }, null)
+        @Html.ActionLink("Yeni soru ekle", "Create", "Question", new { QuizId = Model.Id }, null)
 
         <p>
             <input type="submit" value="Save" />
