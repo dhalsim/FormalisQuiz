@@ -1,0 +1,14 @@
+﻿@model ForlamisQuiz.UI.Models.AccountIndexModel
+
+@{
+    ViewBag.Title = "Sınav Sistemi";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Sınav Sistemi</h2>
+
+@Model.Name @Model.Surname 
+@if (Model.IsAdmin)
+{
+    <text>(Yönetici)</text>
+}

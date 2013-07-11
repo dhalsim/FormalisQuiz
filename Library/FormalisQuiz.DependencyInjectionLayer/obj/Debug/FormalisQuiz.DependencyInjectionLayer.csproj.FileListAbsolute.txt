@@ -1,0 +1,7 @@
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.csprojResolveAssemblyReference.cache
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.pdb

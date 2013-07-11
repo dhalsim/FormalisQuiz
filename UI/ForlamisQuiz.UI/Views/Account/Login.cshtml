@@ -1,0 +1,36 @@
+﻿@using ForlamisQuiz.UI.Extensions
+@model ForlamisQuiz.UI.Models.LoginContext
+
+@{
+    ViewBag.Title = "Oturum Aç";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Oturum Aç</h2>
+
+@if (ViewBag.LoginNotCorrect != null && ViewBag.LoginNotCorrect)
+{
+    <text>Kullanıcı adı veya parolası doğru değil. Tekrar deneyiniz. </text>
+}
+
+@using (Html.BeginForm("LoginUser", "Account"))
+{
+
+    <text>Kullanıcı Adı:</text>
+    @Html.TextBoxFor(context => context.UserName)
+
+    <br />
+
+    <text>Parola:</text>
+    @Html.TextBoxFor(context => context.Password)
+
+    <br />
+    
+    @Html.SubmitButton()
+}
+
+<br />
+
+@Html.ActionLink("Yeni üye ol", "SignUp")
+
+

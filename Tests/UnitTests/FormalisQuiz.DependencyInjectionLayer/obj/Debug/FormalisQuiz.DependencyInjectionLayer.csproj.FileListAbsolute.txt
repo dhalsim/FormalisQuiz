@@ -1,0 +1,9 @@
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\nunit.framework.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\bin\Debug\nunit.framework.xml
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.csprojResolveAssemblyReference.cache
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\UnitTests\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.pdb

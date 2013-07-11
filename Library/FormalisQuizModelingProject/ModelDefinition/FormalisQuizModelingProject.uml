@@ -59,6 +59,28 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="fe066e52-4c6d-4c7a-a1c4-e353735725d6"
+            name="UserName"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="6afe8e65-33d7-406e-826f-5560061b8827"
+            name="Password"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -117,6 +139,17 @@
           <property
             Id="4d7e786f-81a5-4b4b-aa2d-18c39d134334"
             name="Text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="5c09ee4d-47d1-40ce-82f3-160855605826"
+            name="QuizId"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -224,6 +257,17 @@
             isDerivedUnion="false"
             aggregation="None"
             isComposite="false" />
+          <property
+            Id="12cecc16-b67b-4fcd-b5b9-87cec506c4ae"
+            name="True"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
         </ownedAttributesInternal>
       </class>
     </packageHasNamedElement>
@@ -293,6 +337,17 @@
           <property
             Id="28a05431-e5b8-4d8c-ab3d-62927413b76d"
             name="Text"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="46f44ae9-5f0c-4a85-b2aa-ff01f1ddd2e6"
+            name="QuestionId"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"

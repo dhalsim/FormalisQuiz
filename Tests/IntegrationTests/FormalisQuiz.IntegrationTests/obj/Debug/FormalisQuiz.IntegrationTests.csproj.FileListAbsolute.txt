@@ -1,0 +1,16 @@
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.IntegrationTests.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.IntegrationTests.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\EntityFramework.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.DataLayer.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.Models.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.Utilities.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\nunit.framework.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.Models.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.DataLayer.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.Utilities.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\EntityFramework.xml
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\nunit.framework.xml
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\obj\Debug\FormalisQuiz.IntegrationTests.csprojResolveAssemblyReference.cache
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\obj\Debug\FormalisQuiz.IntegrationTests.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\obj\Debug\FormalisQuiz.IntegrationTests.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Tests\IntegrationTests\FormalisQuiz.IntegrationTests\bin\Debug\FormalisQuiz.IntegrationTests.dll.config

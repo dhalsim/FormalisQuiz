@@ -1,0 +1,5 @@
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Common\FormalisQuiz.Models\bin\Debug\FormalisQuiz.Models.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Common\FormalisQuiz.Models\bin\Debug\FormalisQuiz.Models.pdb
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Common\FormalisQuiz.Models\obj\Debug\FormalisQuiz.Models.csprojResolveAssemblyReference.cache
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Common\FormalisQuiz.Models\obj\Debug\FormalisQuiz.Models.dll
+c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Common\FormalisQuiz.Models\obj\Debug\FormalisQuiz.Models.pdb
