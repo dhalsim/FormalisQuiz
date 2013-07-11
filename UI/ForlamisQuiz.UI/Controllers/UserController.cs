@@ -1,21 +1,23 @@
 ﻿using System.Data;
 using System.Linq;
 using System.Web.Mvc;
-using FormalisQuiz.DataLayer;
 using FormalisQuiz.Models;
+using FormalisQuiz.DataLayer;
+using ForlamisQuiz.UI.Filters;
 
 namespace ForlamisQuiz.UI.Controllers
 {
+    [AdminAuthorization("Login", "Account")]
     public class UserController : Controller
     {
-        private readonly FormalisQuizContext _db = new FormalisQuizContext();
+        private FormalisQuizContext db = new FormalisQuizContext();
 
         //
         // GET: /User/
 
         public ActionResult Index()
         {
-            return View(_db.Users.ToList());
+            return View(db.Users.ToList());
         }
 
         //
@@ -23,7 +25,7 @@ namespace ForlamisQuiz.UI.Controllers
 
         public ActionResult Details(int id = 0)
         {
-            User user = _db.Users.Find(id);
+            User user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -48,8 +50,8 @@ namespace ForlamisQuiz.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Users.Add(user);
-                _db.SaveChanges();
+                db.Users.Add(user);
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
@@ -61,7 +63,7 @@ namespace ForlamisQuiz.UI.Controllers
 
         public ActionResult Edit(int id = 0)
         {
-            User user = _db.Users.Find(id);
+            User user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -78,8 +80,8 @@ namespace ForlamisQuiz.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Entry(user).State = EntityState.Modified;
-                _db.SaveChanges();
+                db.Entry(user).State = EntityState.Modified;
+                db.SaveChanges();
                 return RedirectToAction("Index");
             }
             return View(user);
@@ -90,7 +92,7 @@ namespace ForlamisQuiz.UI.Controllers
 
         public ActionResult Delete(int id = 0)
         {
-            User user = _db.Users.Find(id);
+            User user = db.Users.Find(id);
             if (user == null)
             {
                 return HttpNotFound();
@@ -105,15 +107,15 @@ namespace ForlamisQuiz.UI.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            User user = _db.Users.Find(id);
-            _db.Users.Remove(user);
-            _db.SaveChanges();
+            User user = db.Users.Find(id);
+            db.Users.Remove(user);
+            db.SaveChanges();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            _db.Dispose();
+            db.Dispose();
             base.Dispose(disposing);
         }
     }

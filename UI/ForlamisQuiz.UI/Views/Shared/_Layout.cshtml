@@ -1,8 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using ForlamisQuiz.UI.Helpers
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>@ViewBag.Title - Creaturis</title>
+        <title>@ViewBag.Title - Formalis Quiz</title>
         @*<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />*@
         <meta name="viewport" content="width=device-width" />
         @Styles.Render("~/Content/css")
@@ -14,7 +15,7 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@*Html.ActionLink("Creaturis", "Index", "Home")*@</p>
+                    <p class="site-title">@*Html.ActionLink("FormalisQuiz", "Index", "Home")*@</p>
                 </div>
                 <div class="float-right">
                     <section id="login">
@@ -23,9 +24,14 @@
                     <nav>
                         <ul id="menu">
                             <li>@Html.ActionLink("Ana Sayfa", "Index", "Home")</li>
-                            <li>@Html.ActionLink("Sohbet", "Index", "Chat")</li>
-                            <li>@Html.ActionLink("Hakkımızda", "About", "Home")</li>
-                            <li>@Html.ActionLink("İletişim", "Contact", "Home")</li>
+                            
+                            @if (SessionHelper.IsAdmin())
+                            {
+                                <li>@Html.ActionLink("Kullanıcılar", "Index", "User")</li>
+                                <li>@Html.ActionLink("Sınavlar", "Index", "Quiz")</li>
+                                <li>@Html.ActionLink("Sorular", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Sınav Eşleştirme", "Index", "Home")</li>
+                            }
                         </ul>
                     </nav>
                 </div>

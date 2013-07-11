@@ -1,6 +1,6 @@
-﻿using System;
-using System.Linq;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using ForlamisQuiz.UI.Filters;
+using ForlamisQuiz.UI.Helpers;
 using ForlamisQuiz.UI.Models;
 using FormalisQuiz.DataLayer;
 
@@ -8,21 +8,15 @@ namespace ForlamisQuiz.UI.Controllers
 {
     public class AccountController : BaseController
     {
+        [UserAuthorization("Login", "Account")]
         public ActionResult Index()
         {
-            if (SessionManager.UserContext.LoggedIn)
-            {
-                var user = SessionManager.UserContext.User;
-                AccountIndexModel model = new AccountIndexModel
-                                              {
-                                                  Name = user.Name,
-                                                  Surname = user.Surname
-                                              };
-
-                return View("Index", model);
-            }
-            
-            return View("Login");
+            return View("Index", new AccountIndexModel
+                                     {
+                                         IsAdmin = SessionHelper.IsAdmin(),
+                                         Name = SessionManager.UserContext.User.Name,
+                                         Surname = SessionManager.UserContext.User.Surname
+                                     });
         }
 
         public ActionResult Login()
@@ -30,36 +24,24 @@ namespace ForlamisQuiz.UI.Controllers
             return View();
         }
 
-        public ActionResult SignUp()
+        public ActionResult Logout()
         {
             return View();
         }
 
+        [HttpPost]
         public ActionResult LoginUser(LoginContext context)
         {
             AccountOperations accountOperations = new AccountOperations();
             var loggedInUser = accountOperations.SignIn(context);
             
-            if (loggedInUser != null)
+            if (SessionHelper.Login(loggedInUser))
             {
-                var adminRole = accountOperations.GetAdminRole();
-
-                SessionManager.UserContext.LoggedIn = true;
-                SessionManager.UserContext.User = loggedInUser;
-
-                var isAdmin = loggedInUser.Roles != null;
-                isAdmin = isAdmin  && loggedInUser.Roles.Contains(adminRole);
-
-                return View("Index", new AccountIndexModel
-                                         {
-                                             Name = loggedInUser.Name,
-                                             Surname = loggedInUser.Surname,
-                                             IsAdmin = isAdmin
-                                         });
+                return RedirectToAction("Index");
             }
-            
+
             ViewBag.LoginNotCorrect = true;
-            return View("Login");
+            return RedirectToAction("Login");
         }
     }
 }

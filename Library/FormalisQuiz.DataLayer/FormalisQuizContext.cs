@@ -5,6 +5,11 @@ namespace FormalisQuiz.DataLayer
 {
     public class FormalisQuizContext : DbContext
     {
+        public FormalisQuizContext()
+        {
+            
+        }
+
         public FormalisQuizContext(bool lazy = true)
         {
             Configuration.LazyLoadingEnabled = lazy;

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using FormalisQuiz.DataLayer;
 using FormalisQuiz.Models;
 using FormalisQuiz.Utilities;
@@ -9,6 +10,12 @@ namespace FormalisQuiz.IntegrationTests
     [TestFixture]
     public class DataLayerTests
     {
+        [TestFixtureSetUp]
+        public void TestFixtureSetUp()
+        {
+            //Database.SetInitializer<FormalisQuizContext>(null);
+        }
+
         [Test]
         public void Should_insert_to_user_table()
         {
@@ -26,36 +33,49 @@ namespace FormalisQuiz.IntegrationTests
                         Password = CryptoHelper.ConvertToMd5Hash("password")
                     });
 
-                    db.SaveChanges();                    
-                }
-            }
-        }
-
-        [Test]
-        public void Should_create_admin_role()
-        {
-            using (var db = new FormalisQuizContext())
-            {
-                bool adminExists = db.Roles.FirstOrDefault(r => r.Name == "Admin") != null;
-                if (!adminExists)
-                {
-                    db.Roles.Add(new Role {Name = "Admin"});
                     db.SaveChanges();
                 }
             }
         }
 
         [Test]
-        public void Should_give_admin_to_user()
+        public void Should_insert_student_user()
         {
-            Should_insert_to_user_table();
+            using (var db = new FormalisQuizContext())
+            {
+                bool exists = db.Users.FirstOrDefault(u => u.UserName == "student1") != null;
+
+                if (!exists)
+                {
+                    db.Users.Add(new User
+                    {
+                        Name = "Can",
+                        Surname = "Kemal",
+                        UserName = "student1",
+                        Password = CryptoHelper.ConvertToMd5Hash("password")
+                    });
+
+                    db.SaveChanges();
+                }
+            }
+        }
+
+        [Test]
+        public void Should_create_admin_role_to_user()
+        {
             Should_insert_to_user_table();
 
             using (var db = new FormalisQuizContext())
             {
-                var adminRole = db.Roles.First(r => r.Name == "Admin");
-                db.Users.First(u => u.UserName == "testUser").Roles.Add(adminRole);
-                db.SaveChanges();
+                var adminUser = db.Users
+                    .Include("Roles")
+                    .FirstOrDefault(u => u.UserName == "testUser");
+
+                if (adminUser != null && adminUser.Roles == null)
+                {
+                    db.Roles.Add(new Role { Name = "Admin", User = adminUser });
+                    db.SaveChanges();
+                }
             }
         }
     }

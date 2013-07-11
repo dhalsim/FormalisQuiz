@@ -11,7 +11,9 @@ namespace FormalisQuiz.DataLayer
         {
             using (var dbContext = new FormalisQuizContext(false))
             {
-                var user = dbContext.Users.FirstOrDefault(u => u.UserName == context.UserName);
+                var user = dbContext.Users
+                    .Include("Roles")
+                    .FirstOrDefault(u => u.UserName == context.UserName);
 
                 if (user == null)
                 {

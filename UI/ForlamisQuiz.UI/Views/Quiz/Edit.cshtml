@@ -1,0 +1,57 @@
+﻿@model FormalisQuiz.Models.Quiz
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Quiz</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        @foreach (var q in Model.Questions)
+        {
+            <table>
+                <tr>
+                    <td>
+                        @Html.Display(q.Text)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = q.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = q.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = q.Id })
+                    </td>
+                </tr>
+            </table>
+        }
+
+        @Html.ActionLink("Yeni soru ekle", "Create", "Question", new { id = Model.Id }, null)
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

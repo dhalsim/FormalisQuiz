@@ -13,7 +13,7 @@
     <text>Kullanıcı adı veya parolası doğru değil. Tekrar deneyiniz. </text>
 }
 
-@using (Html.BeginForm("LoginUser", "Account"))
+@using (Html.BeginForm("LoginUser", "Account", FormMethod.Post))
 {
 
     <text>Kullanıcı Adı:</text>
@@ -22,15 +22,11 @@
     <br />
 
     <text>Parola:</text>
-    @Html.TextBoxFor(context => context.Password)
+    @Html.PasswordFor(context => context.Password)
 
     <br />
     
     @Html.SubmitButton()
 }
-
-<br />
-
-@Html.ActionLink("Yeni üye ol", "SignUp")
 
 
