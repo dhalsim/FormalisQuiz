@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FormalisQuiz.Models
 {
@@ -17,9 +16,10 @@ namespace FormalisQuiz.Models
         [Display(Name = "Soyisim")]
         public string Surname { get; set; }
 
+        [Display(Name = "Parola")]
         public string Password { get; set; }
 
-        public virtual ICollection<Quiz> Quizzes { get; set; }
+        public virtual ICollection<QuizUser> QuizUsers { get; set; }
 
         public virtual ICollection<Role> Roles { get; set; }
     }

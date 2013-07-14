@@ -1,0 +1,68 @@
+﻿@using FormalisQuiz.Models
+@using WebGrease.Css.Extensions
+@model ForlamisQuiz.UI.Models.UserQuizMatch
+
+@{
+    ViewBag.Title = "Create";
+    
+    // create user list                    
+    var userItems = new List<object>
+                           {
+                               new {Id = 0, Value = "Kullanıcı seçiniz"}
+                           };
+
+    foreach (User u in Model.Users)
+    {
+        userItems.Add(new {Id = u.Id, Value = string.Format("{0} {1} - {2}", u.Name, u.Surname, u.UserName)});
+    }
+    
+    // create quiz list
+    var quizItems = new List<object>
+                           {
+                               new {Id = 0, Value = "Sınav seçiniz"}
+                           };
+
+    foreach (Quiz q in Model.Quizzes)
+    {
+        quizItems.Add(new { Id = q.Id, Value = q.Name });
+    }
+}
+
+<h2>Create</h2>
+
+<h3 style="color: red">@ViewBag.ErrorMessage</h3>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>UserQuizMatch</legend>
+
+        <div class="editor-label">
+            Kullanıcı
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.UserId, new SelectList(userItems, "Id", "Value"))
+        </div>
+
+        <div class="editor-label">
+            Sınav
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.QuizId, new SelectList(quizItems, "Id", "Value"))
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

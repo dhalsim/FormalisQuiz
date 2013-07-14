@@ -14,6 +14,7 @@
         <legend>Question</legend>
 
         @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.Quiz.Id)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Text)
@@ -22,6 +23,15 @@
             @Html.EditorFor(model => model.Text)
             @Html.ValidationMessageFor(model => model.Text)
         </div>
+        
+        Şıklar
+        <ul>
+            @for (int i = 0; i < Model.Answers.Count; i++)
+            {
+                @Html.HiddenFor(question => question.Answers[i].Id)
+                <li style="list-style-type: upper-alpha">@Html.CheckBoxFor(question => question.Answers[i].IsCorrect) @Html.TextBoxFor(m => m.Answers[i].Text)</li>
+            }
+        </ul>
 
         <p>
             <input type="submit" value="Save" />
@@ -30,7 +40,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Edit", "Quiz", new { id = Model.Quiz.Id }, null)
 </div>
 
 @section Scripts {

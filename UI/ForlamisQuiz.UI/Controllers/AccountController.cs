@@ -2,12 +2,14 @@
 using ForlamisQuiz.UI.Filters;
 using ForlamisQuiz.UI.Helpers;
 using ForlamisQuiz.UI.Models;
-using FormalisQuiz.DataLayer;
+using FormalisQuiz.DataLayer.Repositories;
 
 namespace ForlamisQuiz.UI.Controllers
 {
     public class AccountController : BaseController
     {
+        private readonly AccountRepository _accountRepository = new AccountRepository();
+
         [UserAuthorization("Login", "Account")]
         public ActionResult Index()
         {
@@ -21,19 +23,24 @@ namespace ForlamisQuiz.UI.Controllers
 
         public ActionResult Login()
         {
+            if (SessionHelper.IsLoggedIn())
+            {
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
 
         public ActionResult Logout()
         {
-            return View();
+            SessionHelper.Logout();
+            return RedirectToAction("Login");
         }
 
         [HttpPost]
         public ActionResult LoginUser(LoginContext context)
         {
-            AccountOperations accountOperations = new AccountOperations();
-            var loggedInUser = accountOperations.SignIn(context);
+            var loggedInUser = _accountRepository.SignIn(context);
             
             if (SessionHelper.Login(loggedInUser))
             {

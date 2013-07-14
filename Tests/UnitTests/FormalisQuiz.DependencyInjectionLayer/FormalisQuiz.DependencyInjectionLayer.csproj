@@ -53,10 +53,6 @@
       <Project>{BF0A7F3E-C31F-49A1-8E73-ABE1E36B73A4}</Project>
       <Name>FormalisQuiz.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\Library\FormalisQuiz.DependencyInjectionLayer\FormalisQuiz.DependencyInjectionLayer.csproj">
-      <Project>{686EF894-1F51-46FB-9578-9BA4D5DA219B}</Project>
-      <Name>FormalisQuiz.DependencyInjectionLayer %28Library\FormalisQuiz.DependencyInjectionLayer%29</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

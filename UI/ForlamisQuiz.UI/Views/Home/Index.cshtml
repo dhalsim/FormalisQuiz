@@ -1,0 +1,38 @@
+﻿@model ForlamisQuiz.UI.Models.IndexModel
+
+@{
+    ViewBag.Title = "Ana Sayfa";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Ana Sayfa</h2>
+
+<table>
+    <tr>
+        <th>Sınavlar
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.QuizUsers)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quiz.Name)
+            </td>
+            @if (item.Date == null)
+            {
+                <td>
+                    @Html.ActionLink("Gir", "Take", new {quizId = item.QuizId})
+                </td>
+            }
+            else
+            {
+                <td>
+                    @item.Date (@item.CorrectAnswers/@item.Quiz.Questions.Count)
+                </td>
+            }
+        </tr>
+    }
+
+</table>

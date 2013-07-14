@@ -1,19 +1,14 @@
 ﻿using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
 using FormalisQuiz.Models;
+using FormalisQuiz.Models.Interfaces;
 
 namespace FormalisQuiz.DataLayer
 {
-    public class FormalisQuizContext : DbContext
+    public class FormalisQuizContext : DbContext, IDisposedTracker
     {
         public FormalisQuizContext()
         {
-            
-        }
-
-        public FormalisQuizContext(bool lazy = true)
-        {
-            Configuration.LazyLoadingEnabled = lazy;
+            Configuration.LazyLoadingEnabled = false;
         }
 
         public DbSet<User> Users { get; set; }
@@ -22,8 +17,18 @@ namespace FormalisQuiz.DataLayer
 
         public DbSet<Question> Questions { get; set; }
 
-        public DbSet<Answer> Answers { get; set; }
-        
+        public DbSet<QuizUser> QuizUsers { get; set; }
+
         public DbSet<Role> Roles { get; set; }
+
+        public DbSet<Answer> Answers { get; set; }
+
+        public bool IsDisposed { get; set; }
+
+        protected override void Dispose(bool disposing)
+        {
+            IsDisposed = true;
+            base.Dispose(disposing);
+        }
     }
 }

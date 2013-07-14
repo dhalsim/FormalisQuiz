@@ -10,7 +10,7 @@ namespace ForlamisQuiz.UI.Helpers
         {
             return SessionManager.UserContext.LoggedIn
                    && SessionManager.UserContext.User.Roles.FirstOrDefault(r => r.Name == "Admin") != null;
-        } 
+        }
 
         public static bool Login(User user)
         {
@@ -23,6 +23,12 @@ namespace ForlamisQuiz.UI.Helpers
             }
 
             return false;
+        }
+
+        public static void Logout()
+        {
+            SessionManager.UserContext.LoggedIn = false;
+            SessionManager.UserContext.User = null;
         }
 
         public static bool IsLoggedIn()

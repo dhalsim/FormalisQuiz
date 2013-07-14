@@ -9,5 +9,7 @@ namespace FormalisQuiz.Models
         public string Name { get; set; }
 
         public virtual ICollection<Question> Questions { get; set; }
+
+        public virtual ICollection<QuizUser> QuizUsers { get; set; }
     }
 }

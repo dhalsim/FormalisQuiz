@@ -4,9 +4,9 @@
     {
         public int Id { get; set; }
 
-        public int False { get; set; }
-
         public int True { get; set; }
+
+        public int QuestionCount { get; set; }
 
         public virtual User User { get; set; }
 

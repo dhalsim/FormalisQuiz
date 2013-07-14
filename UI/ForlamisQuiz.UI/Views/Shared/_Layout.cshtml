@@ -1,58 +1,76 @@
 ﻿@using ForlamisQuiz.UI.Helpers
+@using ForlamisQuiz.UI.Models
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>@ViewBag.Title - Formalis Quiz</title>
-        @*<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />*@
-        <meta name="viewport" content="width=device-width" />
-        @Styles.Render("~/Content/css")
-        @Scripts.Render("~/bundles/modernizr")
-        
-        @RenderSection("css", required: false)
-    </head>
-    <body>
-        <header>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">@*Html.ActionLink("FormalisQuiz", "Index", "Home")*@</p>
-                </div>
-                <div class="float-right">
-                    <section id="login">
-                        @*Html.Partial("_LoginPartial")*@
-                    </section>
-                    <nav>
-                        <ul id="menu">
-                            <li>@Html.ActionLink("Ana Sayfa", "Index", "Home")</li>
-                            
-                            @if (SessionHelper.IsAdmin())
-                            {
-                                <li>@Html.ActionLink("Kullanıcılar", "Index", "User")</li>
-                                <li>@Html.ActionLink("Sınavlar", "Index", "Quiz")</li>
-                                <li>@Html.ActionLink("Sorular", "Index", "Home")</li>
-                                <li>@Html.ActionLink("Sınav Eşleştirme", "Index", "Home")</li>
-                            }
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
-        <div id="body">
-            @RenderSection("featured", required: false)
-            <section class="content-wrapper main-content clear-fix">
-                @RenderBody()
-            </section>
-        </div>
-        <footer>
-            <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - FormalisQuiz</p>
-                </div>
-            </div>
-        </footer>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Formalis Quiz</title>
+    @*<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />*@
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
 
-        @Scripts.Render("~/bundles/jquery")
-        @RenderSection("scripts", required: false)
-        <script type="text/javascript" src="https://s3.amazonaws.com/appfail-us/appfail.reporting.min.js?slug=5a9e284a-eae7-46ec-ba03-e2afc13feeb0"></script>
-    </body>
+    @RenderSection("css", required: false)
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">@*Html.ActionLink("FormalisQuiz", "Index", "Home")*@</p>
+            </div>
+            <div class="float-right">
+                <section id="login">
+                    @*Html.Partial("_LoginPartial")*@
+                </section>
+                <nav>
+                    <ul id="menu">
+                        <li>@Html.ActionLink("Ana Sayfa", "Index", "Home")</li>
+
+                        @if (SessionHelper.IsAdmin())
+                        {
+                            <li>@Html.ActionLink("Kullanıcılar", "Index", "User")</li>
+                            <li>@Html.ActionLink("Sınavlar", "Index", "Quiz")</li>
+                            <li>@Html.ActionLink("Sınav Eşleştirme", "Index", "Matcher")</li>
+                        }
+                    </ul>
+                </nav>
+                <section>
+                    <div>
+                        @if (SessionHelper.IsLoggedIn())
+                        {
+                            <span>@SessionManager.UserContext.User.Name @SessionManager.UserContext.User.Surname</span>
+                        }
+
+                        @if (SessionHelper.IsAdmin())
+                        {
+                            <span>(Yönetici)</span>
+                        }
+                        
+                        @if (SessionHelper.IsLoggedIn())
+                        {
+                            @Html.ActionLink("Çıkış", "Logout", "Account")
+                        }
+                    </div>
+                </section>
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        @RenderSection("featured", required: false)
+        <section class="content-wrapper main-content clear-fix">
+            @RenderBody()
+        </section>
+    </div>
+    <footer>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p>&copy; @DateTime.Now.Year - FormalisQuiz</p>
+            </div>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="https://s3.amazonaws.com/appfail-us/appfail.reporting.min.js?slug=5a9e284a-eae7-46ec-ba03-e2afc13feeb0"></script>
+</body>
 </html>

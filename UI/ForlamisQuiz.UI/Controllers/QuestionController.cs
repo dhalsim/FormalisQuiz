@@ -1,52 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using FormalisQuiz.Models;
-using FormalisQuiz.DataLayer;
+using ForlamisQuiz.UI.Filters;
+using FormalisQuiz.DataLayer.Repositories;
 
 namespace ForlamisQuiz.UI.Controllers
 {
+    [AdminAuthorization("Login", "Account")]
     public class QuestionController : Controller
     {
-        private FormalisQuizContext db = new FormalisQuizContext();
+        private readonly QuestionRepository _questionRepository = new QuestionRepository();
+        private readonly QuizRepository _quizRepository = new QuizRepository();
 
-        //
-        // GET: /Question/
-
-        public ActionResult Index(int quizID)
+        public ActionResult Index(int quizId)
         {
-            return View(db.Questions.Where(question => question.Quiz.Id == quizID).ToList());
+            return View(_questionRepository.GetQuestions(quizId));
         }
-
-        //
-        // GET: /Question/Details/5
-
-        public ActionResult Details(int id = 0)
-        {
-            Question question = db.Questions.Find(id);
-            if (question == null)
-            {
-                return HttpNotFound();
-            }
-            return View(question);
-        }
-
-        //
-        // GET: /Question/Create
 
         public ActionResult Create(int quizId)
         {
-            var questionOperations = new QuestionOperations();
-            var question = questionOperations.Get(quizId) ?? new Question();
-            return View(question);
+            var quiz = _quizRepository.Find(quizId);
+            return View(new Question { Quiz = quiz });
         }
-
-        //
-        // POST: /Question/Create
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -54,39 +28,24 @@ namespace ForlamisQuiz.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (question.Id == 0)
-                {
-                    question.Quiz = db.Quizzes.Find(quizId);
-                    db.Questions.Add(question);
-                }
-                else
-                {
-                    db.Questions.Attach(question);
-                    db.Entry(question).State = EntityState.Modified;
-                }
-
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                _questionRepository.Create(question, quizId);
+                return RedirectToAction("Index", new { quizId = quizId });
             }
 
             return View(question);
         }
 
-        //
-        // GET: /Question/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
-            Question question = db.Questions.Find(id);
+            Question question = _questionRepository.GetWithQuizAndAnswersIncluded(id);
+
             if (question == null)
             {
                 return HttpNotFound();
             }
+
             return View(question);
         }
-
-        //
-        // POST: /Question/Edit/5
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -94,19 +53,15 @@ namespace ForlamisQuiz.UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(question).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                _questionRepository.Update(question);
+                return RedirectToAction("Index", new { quizId = question.Quiz.Id });
             }
             return View(question);
         }
 
-        //
-        // GET: /Question/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
-            Question question = db.Questions.Find(id);
+            Question question = _questionRepository.GetWithQuizIncluded(id);
             if (question == null)
             {
                 return HttpNotFound();
@@ -114,27 +69,12 @@ namespace ForlamisQuiz.UI.Controllers
             return View(question);
         }
 
-        //
-        // POST: /Question/Delete/5
-
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Question question = db.Questions.Find(id);
-            question.Answers.Clear();
-
-
-            db.Questions.Remove(question);
-
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
+            int quizId = _questionRepository.Delete(id);
+            return RedirectToAction("Index", "Quiz", new { quizId = quizId });
         }
     }
 }

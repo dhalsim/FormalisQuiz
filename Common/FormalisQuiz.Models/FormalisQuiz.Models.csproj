@@ -41,15 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Answer.cs" />
+    <Compile Include="Interfaces\IDisposedTracker.cs" />
     <Compile Include="LoginContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
     <Compile Include="Quiz.cs" />
+    <Compile Include="QuizUsers.cs" />
     <Compile Include="Result.cs" />
     <Compile Include="Role.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserContext.cs" />
-    <Compile Include="UserQuiz.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

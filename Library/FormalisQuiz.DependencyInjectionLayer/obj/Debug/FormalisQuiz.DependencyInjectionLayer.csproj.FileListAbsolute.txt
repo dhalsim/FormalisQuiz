@@ -5,3 +5,10 @@ c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.csprojResolveAssemblyReference.cache
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.dll
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.pdb
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.DependencyInjectionLayer.pdb
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.dll
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\bin\Debug\FormalisQuiz.Models.pdb
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.csprojResolveAssemblyReference.cache
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.dll
+C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DependencyInjectionLayer\obj\Debug\FormalisQuiz.DependencyInjectionLayer.pdb

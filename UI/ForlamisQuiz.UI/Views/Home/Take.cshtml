@@ -1,0 +1,39 @@
+﻿@using FormalisQuiz.Models
+@model FormalisQuiz.Models.Quiz
+
+@{
+    ViewBag.Title = string.Format("Sınav - {0}", Model.Name);
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Sınav - @Model.Name</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.Id)
+    <ol>
+        @{
+            var questions = Model.Questions.ToList();
+        }
+
+        @for (int j = 0; j < Model.Questions.Count; j++)
+        {
+            @Html.HiddenFor(q => questions[j].Id)
+            <li>@questions[j].Text
+                <ul>
+                    @for (int i = 0; i < questions[j].Answers.Count; i++)
+                    {
+                        @Html.HiddenFor(q => questions[j].Answers[i].Id)
+                        <li style="list-style-type: upper-alpha">@Html.CheckBoxFor(q => questions[j].Answers[i].IsCorrect) @Html.TextBoxFor(q => questions[j].Answers[i].Text)</li>
+                    }
+                </ul>
+            </li>
+        }
+    </ol>
+    
+    <p>
+        <input type="submit" value="Teslim Et" />
+    </p>
+}

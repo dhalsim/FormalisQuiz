@@ -1,0 +1,28 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Sınav Öğrenci Eşleştirme";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Sınav Öğrenci Eşleştirme</h2>
+
+@Html.ActionLink("Yeni Eşleştirme", "Create")
+
+<table id="QuizStudentMatchList">
+      <thead>
+          <tr>
+              <th>K.ID</th>
+              <th>S.ID</th>
+              <th>Ad</th>
+              <th>Soyad</th>
+              <th>Kullanıcı Adı</th>
+              <th>Sınav</th>
+              <th>Sonuç</th>
+              <th>Tarih</th>
+              <th>Sil</th>
+          </tr>
+      </thead>
+      <tbody> 
+      </tbody>
+</table> 
