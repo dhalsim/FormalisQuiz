@@ -3,3 +3,8 @@ c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.csprojResolveAssemblyReference.cache
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.dll
 c:\users\baydek\documents\visual studio 2012\Projects\FormalisQuiz\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.Utilities\bin\Debug\FormalisQuiz.Utilities.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.Utilities\bin\Debug\FormalisQuiz.Utilities.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.csprojResolveAssemblyReference.cache
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.Utilities\obj\Debug\FormalisQuiz.Utilities.pdb

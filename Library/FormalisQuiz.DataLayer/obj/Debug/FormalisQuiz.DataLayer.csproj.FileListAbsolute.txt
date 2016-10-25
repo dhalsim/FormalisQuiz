@@ -22,3 +22,15 @@ C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\Forma
 C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.csprojResolveAssemblyReference.cache
 C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.dll
 C:\Users\baydek\Documents\Visual Studio 2012\Projects\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.DataLayer.dll.config
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.DataLayer.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.DataLayer.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\EntityFramework.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.Models.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.Utilities.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.Models.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\FormalisQuiz.Utilities.pdb
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\bin\Debug\EntityFramework.xml
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.dll
+C:\Users\baydek\Documents\GitHub\FormalisQuiz\Library\FormalisQuiz.DataLayer\obj\Debug\FormalisQuiz.DataLayer.pdb
