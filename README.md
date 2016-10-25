@@ -10,8 +10,8 @@ Ya da Package Manager Console üzerinden Enable-Migrations ve Update-Migrations 
 DB kurulumundan sonra proje çalıştırıldıktan sonra karışınıza giriş ekranı gelecektir.
 Admin kullanıcısı ve parolası:
 
-testUser
-password
+* testUser
+* password
 
 Admin kullanıcısıyla login olup, yeni kullanıcı ve test giriniz. Ardından bu testi kullanıcıyla eşleştiriniz. Yeni kullanıcıyla login olduğunuzda ana sayfada o testi alabilirsiniz.
 
